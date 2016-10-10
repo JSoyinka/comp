@@ -89,3 +89,6 @@ def from_json():
         else:
             # pass quietly
             continue
+
+from_json()
+to_json()

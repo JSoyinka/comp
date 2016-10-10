@@ -66,5 +66,5 @@ def bluesbooze(state):
 	return
 
 print bluesbooze('Alabama');
-
+    
 

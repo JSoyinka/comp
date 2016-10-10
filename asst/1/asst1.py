@@ -7,7 +7,8 @@ def swapchars(text):
 	lower_text = text.lower()
 	c = Counter(text)
 	max = -1;
-	min = sys.maxint;
+	min = len(text) + 1;
+
 	for key in c:
 		if key.isalpha():
 			if c[key] > max:
@@ -33,14 +34,14 @@ def sortcat(num, *args):
 		print "Error: Invalid number provided."
 		return
 	strs = []
-	for i in args:
-		strs.append(i)
+	strs = list(args)
 	strs.sort(key=len, reverse=True)
 
-	new_str = ''
-	for i in range(num):
-		new_str += strs[i]
-	print new_str
+	print strs[:num]
+	# new_str = ''
+	# for i in range(num):
+	# 	new_str += strs[i]
+	# print new_str
 	return
 
 sortcat(1, 'abc', 'bc')
@@ -65,4 +66,5 @@ def bluesbooze(state):
 	return
 
 print bluesbooze('Alabama');
+
 
